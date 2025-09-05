@@ -1,7 +1,11 @@
+import { Outlet } from 'react-router-dom';
 import Categories from '../../components/categories/categories.component.jsx'
 
 export default function Home() {
   return (
-    <Categories />
+    <div>
+      <Categories />
+      <Outlet />
+    </div>
   );
 }
