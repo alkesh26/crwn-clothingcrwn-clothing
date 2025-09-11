@@ -5,6 +5,7 @@ import './navigation.styles.scss'
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg'
 import { UserContext } from '../../context/user.context'
 import { signOutUser } from '../../utils/firebase/firebase.utils'
+import CartIcon from '../../components/cart-icon/cart-icon.component'
 
 export default function Navigation() {
   const { currentUser } = useContext(UserContext)
@@ -31,6 +32,9 @@ export default function Navigation() {
               </Link>
             )
           }
+          <Link className='nav-link'>
+            <CartIcon />
+          </Link>
         </div>
       </div>
       <Outlet />
